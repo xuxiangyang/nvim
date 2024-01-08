@@ -44,3 +44,6 @@ local autocmd = vim.api.nvim_create_autocmd
 -- })
 vim.wo.relativenumber = true
 vim.opt.mouse = ""
+vim.opt.equalalways = false
+vim.g.sql_type_default = "mysql"
+

@@ -38,6 +38,9 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- golang
+    "gopls",
   },
 }
 
@@ -54,6 +57,14 @@ M.nvimtree = {
         git = true,
       },
     },
+  },
+}
+
+M.copilot = {
+  suggestion = { enabled = true },
+  panel = { enabled = false },
+  filetypes = {
+    ["*"] = true,
   },
 }
 

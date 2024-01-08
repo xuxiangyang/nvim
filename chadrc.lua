@@ -16,7 +16,10 @@ M.ui = {
   },
   statusline = {
     theme = "default",
-  }
+  },
+  nvdash = {
+    load_on_startup = true,
+  },
 }
 
 M.plugins = "custom.plugins"
