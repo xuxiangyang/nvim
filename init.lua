@@ -47,3 +47,9 @@ vim.opt.mouse = ""
 vim.opt.equalalways = false
 vim.g.sql_type_default = "mysql"
 
+--- nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
+--- nvim-tree
+
