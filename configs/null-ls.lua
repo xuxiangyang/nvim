@@ -16,10 +16,8 @@ local sources = {
   -- b.formatting.clang_format,
 
   -- golang
-  b.formatting.gofumpt,
-  b.formatting.goimports_reviser.with {
-    extra_args = { "-set-alias", "-format" },
-  },
+  b.formatting.gofmt,
+  b.formatting.goimports,
 }
 
 null_ls.setup {

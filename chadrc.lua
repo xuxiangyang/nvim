@@ -12,13 +12,15 @@ M.ui = {
   hl_add = highlights.add,
 
   tabufline = {
-    enabled = false,
+    enabled = true,
+    lazyload = true,
+    show_numbers = true,
   },
   statusline = {
     theme = "default",
   },
   nvdash = {
-    load_on_startup = true,
+    load_on_startup = false,
   },
 }
 
