@@ -49,14 +49,24 @@ M.nvimtree = {
   git = {
     enable = true,
   },
-
   renderer = {
     highlight_git = true,
     icons = {
       show = {
-        git = true,
+        file = false,
+        folder = false,
+        folder_arrow = false,
+        git = false,
+        modified = true,
+        diagnostics = false,
+        bookmarks = false,
       },
     },
+  },
+  view = {
+    width = 35,
+    relativenumber = true,
+    signcolumn = "no",
   },
 }
 
