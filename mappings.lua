@@ -60,4 +60,54 @@ M.gopher = {
   },
 }
 
+M.tabufline = {
+  plugin = true,
+  n = {
+    ["<leader>tg"] = {
+      function()
+        local tabline = require "nvchad.tabufline"
+        local t_idx_str = vim.fn.input "Enter Tab number: "
+        local tidx = tonumber(t_idx_str)
+        local bufs = tabline.bufilter() or {}
+        if tidx > #bufs or tidx < 1 then
+          print("Invalid tab number input is " .. tidx .. " len is " .. #bufs)
+          return
+        end
+        vim.cmd("b" .. bufs[tidx])
+      end,
+      "Goto assign tab",
+    },
+    ["<leader>tl"] = {
+      function()
+        require("nvchad.tabufline").tabuflineNext()
+      end,
+      "Goto next tab",
+    },
+    ["<leader>th"] = {
+      function()
+        require("nvchad.tabufline").tabuflinePrev()
+      end,
+      "Goto pre tab",
+    },
+    ["<leader>txr"] = {
+      function()
+        require("nvchad.tabufline").closeBufs_at_direction "right"
+      end,
+      "Close tab to right",
+    },
+    ["<leader>txo"] = {
+      function()
+        require("nvchad.tabufline").closeOtherBufs()
+      end,
+      "Close other tab",
+    },
+  },
+}
+
+M.disabled = {
+  n = {
+    ["<tab>"] = "",
+    ["<S-tab>"] = "",
+  },
+}
 return M
