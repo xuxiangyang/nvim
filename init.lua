@@ -40,6 +40,7 @@ local autocmd = vim.api.nvim_create_autocmd
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.mouse = ""
 vim.opt.equalalways = false

@@ -66,6 +66,7 @@ M.nvimtree = {
   view = {
     width = 35,
     relativenumber = true,
+    number = false,
     signcolumn = "no",
   },
 }
