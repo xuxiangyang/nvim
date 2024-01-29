@@ -114,6 +114,35 @@ local plugins = {
     "NvChad/nvim-colorizer.lua",
     enabled = false,
   },
+  {
+    "phaazon/hop.nvim",
+    event = "VeryLazy",
+    config = function()
+      local hop = require "hop"
+      hop.setup()
+      vim.keymap.set("", "f", function()
+        hop.hint_char1()
+      end, { remap = true })
+    end,
+  },
+  {
+    "yorickpeterse/nvim-window",
+    event = "VeryLazy",
+    config = function()
+      local nw = require "nvim-window"
+      nw.setup {}
+    end,
+  },
+  -- {
+  --   "BYT0723/goctl.nvim",
+  --   dependencies = "MunifTanjim/nui.nvim",
+  --   build = function()
+  --     vim.cmd [[silent! GoctlUpgrade]]
+  --   end,
+  --   config = function()
+  --     require("goctl").setup()
+  --   end,
+  -- },
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
   -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example

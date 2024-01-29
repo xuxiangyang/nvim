@@ -104,6 +104,23 @@ M.tabufline = {
   },
 }
 
+M.nvim_window = {
+  n = {
+    ["<leader>wp"] = {
+      function()
+        require("nvim-window").pick()
+      end,
+      "Pick window",
+    },
+    ["<C-w>p"] = {
+      function()
+        require("nvim-window").pick()
+      end,
+      "Pick window",
+    },
+  },
+}
+
 M.disabled = {
   n = {
     ["<tab>"] = "",
