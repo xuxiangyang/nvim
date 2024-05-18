@@ -56,3 +56,4 @@ vim.opt.termguicolors = true
 vim.o.timeoutlen = 200
 --- which key---
 vim.o.hlsearch = false
+vim.opt.swapfile = false
