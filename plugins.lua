@@ -66,7 +66,7 @@ local plugins = {
   },
   {
     "max397574/better-escape.nvim",
-    event = "InsertEnter",
+    event = "VeryLazy",
     config = function()
       require("better_escape").setup()
     end,
@@ -75,6 +75,9 @@ local plugins = {
     "zbirenbaum/copilot.lua",
     event = "InsertEnter",
     opts = overrides.copilot,
+    config = function()
+      require("copilot").setup {}
+    end,
   },
   {
     "hrsh7th/nvim-cmp",
@@ -88,8 +91,8 @@ local plugins = {
     },
     opts = {
       sources = {
-        { name = "nvim_lsp", group_index = 2 },
         { name = "copilot",  group_index = 2 },
+        { name = "nvim_lsp", group_index = 2 },
         { name = "luasnip",  group_index = 2 },
         { name = "buffer",   group_index = 2 },
         { name = "nvim_lua", group_index = 2 },
@@ -150,6 +153,15 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- }
+  -- {
+  --   "ibhagwan/fzf-lua",
+  --   -- optional for icon support
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   config = function()
+  --     -- calling `setup` is optional for customization
+  --     require("fzf-lua").setup {}
+  --   end,
+  -- },
 }
 
 return plugins
