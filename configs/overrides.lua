@@ -26,6 +26,7 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+    "codelldb",
 
     -- golang
     "gopls",
@@ -66,6 +67,17 @@ M.copilot = {
   filetypes = {
     ["*"] = true,
   },
+  workspace_folders = {
+    "/Users/mico/Micoworld/xenalive",
+  },
 }
 
+M.mason_dap = {
+  handlers = {},
+  ensure_installed = {
+    "codelldb",
+    "cppdbg",
+    "delve",
+  },
+}
 return M

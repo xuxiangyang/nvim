@@ -7,8 +7,13 @@ local sources = {
   -- Lua
   b.formatting.stylua,
 
-  -- cpp
-  -- b.formatting.clang_format,
+  -- -- cpp
+  -- b.formatting.clang_format.with({
+  --   filetypes = { "c", "cpp", "h", "hpp", "objc", "objcpp" },
+  -- }),
+
+  -- buf
+  b.formatting.buf,
 
   -- golang
   b.formatting.gofmt,

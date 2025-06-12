@@ -17,6 +17,30 @@ M.dap = {
       "<cmd> DapToggleBreakpoint <CR>",
       "Add breakpoint at line",
     },
+    ["<leader>dr"] = {
+      "<cmd> DapContinue <CR>",
+      "Start or continue the debugger",
+    },
+    ["<leader>dn"] = {
+      "<cmd> DapStepOver <CR>",
+      "step over",
+    },
+    ["<leader>di"] = {
+      "<cmd> DapStepInto <CR>",
+      "Step in",
+    },
+    ["<leader>do"] = {
+      "<cmd> DapStepOut <CR>",
+      "Step out",
+    },
+    ["<leader>dq"] = {
+      "<cmd> DapTerminate <CR>",
+      "Step out",
+    },
+    ["<leader>de"] = {
+      "<cmd> DapEval <CR>",
+      "Eval",
+    },
     ["<leader>dus"] = {
       function()
         local widgets = require "dap.ui.widgets"
@@ -127,4 +151,5 @@ M.disabled = {
     ["<S-tab>"] = "",
   },
 }
+
 return M
